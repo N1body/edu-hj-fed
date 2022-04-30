@@ -57,7 +57,7 @@ export default {
         } else {
           // 登录成功 保存登录状态
           // 并且之后在访问需要登录的页面的时候判断是否在登录状态 (使用路由拦截器)
-          console.log('此处用vuex容器进行保存')
+          this.$store.commit('setUser', data.content)
           // 成功后跳转到首页 或者登录失效前准备跳转的页面
           // 登录失效前准备跳转的页面可以通过拦截器传递query参数来获取
           this.$router.push(this.$route.query.redirect || '/')
