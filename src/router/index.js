@@ -1,9 +1,10 @@
+import store from '@/store'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
   routes: [
     {
       name: 'login',
@@ -13,6 +14,9 @@ export default new VueRouter({
     {
       path: '/',
       component: () => import('@/layout/index.vue'),
+      meta: {
+        requireAuth: true
+      },
       children: [
         {
           path: '', // 默认子路由
@@ -64,3 +68,25 @@ export default new VueRouter({
 
   ]
 })
+
+
+// 设置全局前置守卫
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requireAuth)) {
+    // console.log(this)
+    if (!store.state.user) {
+      next({
+        name: 'login',
+        query: {
+          redirect: to.fullPath
+        }
+      })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+}) 
+
+export default router
