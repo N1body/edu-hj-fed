@@ -123,8 +123,6 @@ export default {
       dialogVisible: false,
       users: [],
       isLoading: false,
-      online: 'status status-success',
-      offline: 'status status-danger',
       portrait: 'http://www.lgstatic.com/thumbnail_100x100/i/image2/M01/5E/65/CgotOVszSAOANi0LAAAse2IVWAE693.jpg',
       selectRoleId: null,
       selectRoles: [],

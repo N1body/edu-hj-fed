@@ -1,10 +1,16 @@
 <template>
-  <div class="role">角色管理</div>
+  <div class="role">
+    <RoleList/>
+  </div>
 </template>
 
 <script>
+import RoleList from './components/RoleList.vue'
 export default {
-  name: 'RoleIndex'
+  name: 'RoleIndex',
+  components: {
+    RoleList
+  }
 }
 </script>
 
