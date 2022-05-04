@@ -3,8 +3,6 @@
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
@@ -61,15 +59,7 @@ export default {
     return {
 
     }
-  },
-  methods: {
-    handleOpen (key, keyPath) {
-      console.log('Open:', key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log('Close:', key, keyPath)
-    }
-  },
+  }
 }
 </script>
 
