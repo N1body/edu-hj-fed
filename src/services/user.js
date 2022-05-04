@@ -9,3 +9,40 @@ export const login = data => {
     data: qs.stringify(data)
   })
 }
+
+export const getUerInfo = () => {
+  return request({
+    method: 'GET',
+    url: '/front/user/getInfo'
+  })
+}
+
+export const getUserPages = data => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/getUserPages',
+    data
+  })
+}
+
+export const getAllRoles = () => {
+  return request({
+    method: 'GET',
+    url: '/boss/role/all'
+  })
+}
+
+export const getUserRole = id => {
+  return request({
+    method: 'GET',
+    url: `/boss/role/user/${id}`
+  })
+}
+
+export const allocateUserRoles = data => {
+  return request({
+    method: 'POST',
+    url: '/boss/role/allocateUserRoles',
+    data
+  })
+}
