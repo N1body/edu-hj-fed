@@ -20,43 +20,67 @@ const router = new VueRouter({
       children: [
         {
           path: '', // 默认子路由
-          name: '首页',
-          component: () => import(/* webpackChunkName: 'home' */ '@/views/home/index.vue')
+          name: 'index',
+          component: () => import(/* webpackChunkName: 'home' */ '@/views/course/index.vue'),
+          meta: {
+            title: '课程管理'
+          }
         },
         {
           path: '/role',
-          name: '角色管理',
-          component: () => import(/* webpackChunkName: 'role' */ '@/views/role/index.vue')
+          name: 'role',
+          component: () => import(/* webpackChunkName: 'role' */ '@/views/role/index.vue'),
+          meta: {
+            title: '角色管理'
+          }
         },
         {
           path: '/menu',
-          name: '菜单管理',
-          component: () => import(/* webpackChunkName: 'menu' */ '@/views/menu/index.vue')
+          name: 'menu',
+          component: () => import(/* webpackChunkName: 'menu' */ '@/views/menu/index.vue'),
+          meta: {
+            title: '菜单管理'
+          }
         },
         {
           path: '/resource',
-          name: '资源管理',
-          component: () => import(/* webpackChunkName: 'resource' */ '@/views/resource/index.vue')
+          name: 'resource',
+          component: () => import(/* webpackChunkName: 'resource' */ '@/views/resource/index.vue'),
+          meta: {
+            title: '资源管理'
+          }
         },
         {
           path: '/course',
-          name: '课程管理',
-          component: () => import(/* webpackChunkName: 'course' */ '@/views/course/index.vue')
+          name: 'course',
+          component: () => import(/* webpackChunkName: 'course' */ '@/views/course/index.vue'),
+          meta: {
+            title: '课程管理'
+          }
         },
         {
           path: '/user',
-          name: '用户管理',
-          component: () => import(/* webpackChunkName: 'user' */ '@/views/user/index.vue')
+          name: 'user',
+          component: () => import(/* webpackChunkName: 'user' */ '@/views/user/index.vue'),
+          meta: {
+            title: '用户管理'
+          }
         },
         {
           path: '/advert',
-          name: '广告列表',
-          component: () => import(/* webpackChunkName: 'advert' */ '@/views/advert/index.vue')
+          name: 'advert',
+          component: () => import(/* webpackChunkName: 'advert' */ '@/views/advert/index.vue'),
+          meta: {
+            title: '广告列表'
+          }
         },
         {
           path: '/advert-space',
-          name: '广告位列表',
-          component: () => import(/* webpackChunkName: 'advertspace' */ '@/views/advert-space/index.vue')
+          name: 'advert-space',
+          component: () => import(/* webpackChunkName: 'advertspace' */ '@/views/advert-space/index.vue'),
+          meta: {
+            title: '广告位列表'
+          }
         }
       ]
     },
@@ -87,6 +111,11 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
-}) 
+})
+
+// router.afterEach(to => {
+//   // console.log('afterEach', to, from)
+//   console.log(to.matched[1])
+// })
 
 export default router
