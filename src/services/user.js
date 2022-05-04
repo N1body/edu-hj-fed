@@ -10,6 +10,7 @@ export const login = data => {
   })
 }
 
+// 获取登录用户信息
 export const getUerInfo = () => {
   return request({
     method: 'GET',
@@ -17,6 +18,7 @@ export const getUerInfo = () => {
   })
 }
 
+// 根据页码信息获取用户列表
 export const getUserPages = data => {
   return request({
     method: 'POST',
@@ -25,6 +27,7 @@ export const getUserPages = data => {
   })
 }
 
+// 获取所有角色信息
 export const getAllRoles = () => {
   return request({
     method: 'GET',
@@ -32,6 +35,7 @@ export const getAllRoles = () => {
   })
 }
 
+// 根据 id 获取已分配角色信息
 export const getUserRole = id => {
   return request({
     method: 'GET',
@@ -39,6 +43,7 @@ export const getUserRole = id => {
   })
 }
 
+// 给用户分配角色信息
 export const allocateUserRoles = data => {
   return request({
     method: 'POST',
