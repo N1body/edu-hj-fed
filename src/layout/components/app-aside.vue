@@ -1,7 +1,7 @@
 <template>
   <div class="aside">
     <el-menu
-      default-active="2"
+      :default-active="currentIndex"
       class="el-menu-vertical-demo"
       background-color="#545c64"
       text-color="#fff"
@@ -59,6 +59,15 @@ export default {
     return {
 
     }
+  },
+  computed: {
+    currentIndex () {
+      const index = this.$route.path.split('/')[1]
+      return '/' + (index === '' ? 'course' : index)
+    }
+  },
+  created () {
+    console.log()
   }
 }
 </script>
