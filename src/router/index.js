@@ -103,6 +103,24 @@ const router = new VueRouter({
           },
           // 第二种传递 params 参数的方法
           props: true
+        },
+        {
+          path: '/menu/:menuId/edit',
+          name: 'editMenu',
+          component: () => import(/* webpackChunkName: 'editmenu' */ '@/views/menu/Edit.vue'),
+          meta: {
+            title: '编辑菜单'
+          },
+          // 第二种传递 params 参数的方法
+          props: true
+        },
+        {
+          path: '/menu/create',
+          name: 'createMenu',
+          component: () => import(/* webpackChunkName: 'createmenu' */ '@/views/menu/Create.vue'),
+          meta: {
+            title: '添加菜单'
+          }
         }
       ]
     },
