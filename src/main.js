@@ -12,5 +12,8 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   router,
-  store
+  store,
+  beforeCreate () {
+    Vue.prototype.$bus = this // 全局事件总线
+  }
 }).$mount('#app')
