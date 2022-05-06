@@ -121,6 +121,14 @@ const router = new VueRouter({
           meta: {
             title: '添加菜单'
           }
+        },
+        {
+          path: '/resource/category',
+          name: 'resourceCategory',
+          component: () => import(/* webpackChunkName: 'resourceCategory' */ '@/views/resource/components/Category.vue'),
+          meta: {
+            title: '资源分类'
+          }
         }
       ]
     },
