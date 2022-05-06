@@ -81,6 +81,28 @@ const router = new VueRouter({
           meta: {
             title: '广告位列表'
           }
+        },
+        {
+          path: '/role/:roleId/alloc-menu',
+          name: 'allocMenu',
+          component: () => import(/* webpackChunkName: 'allocmenu' */ '@/views/role/components/alloc-menu.vue'),
+          meta: {
+            title: '分配菜单'
+          },
+          // 第一种传递 params 参数的方法
+          props ({params: {roleId}}) {
+            return {roleId}
+          }
+        },
+        {
+          path: '/role/:roleId/alloc-resource',
+          name: 'allocResource',
+          component: () => import(/* webpackChunkName: 'allocresource' */ '@/views/role/components/alloc-resource.vue'),
+          meta: {
+            title: '分配资源'
+          },
+          // 第二种传递 params 参数的方法
+          props: true
         }
       ]
     },
