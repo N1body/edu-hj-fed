@@ -1,4 +1,5 @@
 <template>
+  <!-- 菜单管理组件 -->
   <div class="menu">
     <el-card>
       <div slot="header">
