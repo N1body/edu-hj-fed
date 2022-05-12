@@ -1,4 +1,5 @@
 <template>
+  <!-- 分配资源组件 -->
   <div>
     <el-card>
       <div slot="header">分配资源</div>
