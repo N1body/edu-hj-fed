@@ -1,5 +1,7 @@
 <template>
+  <!-- 资源列表组件 -->
   <div>
+    <!-- 资源检索表单 -->
     <el-form :inline="true" :model="pages" class="demo-form-inline">
       <el-form-item label="资源名称">
         <el-input v-model="pages.name" placeholder="资源名称"></el-input>
@@ -23,6 +25,7 @@
       </el-form-item>
     </el-form>
 
+    <!-- 资源列表信息表格 -->
     <el-card class="box-card">
       <div slot="header" class="clearfix">
         <el-button @click="addResource" :disabled="isLoading">添加资源</el-button>
@@ -82,6 +85,7 @@
       </el-table>
     </el-card>
 
+    <!-- 添加或编辑资源弹出框 -->
     <el-dialog :title="isEdit ? '编辑资源' : '添加资源'" :visible.sync="dialogFormVisible" width="35%">
       <el-form :model="form" :label-width="formLabelWidth">
         <el-form-item label="资源名称">
@@ -111,6 +115,7 @@
       </div>
     </el-dialog>
 
+    <!-- 页码 -->
     <el-pagination
       :disabled="isLoading"
       @size-change="handleSizeChange"
