@@ -1,4 +1,6 @@
 <template>
+  <!-- 广告位列表组件 -->
+  <!-- 由于接口有问题,所以只做了各基本框架 -->
   <div class="menu">
     <el-card>
       <div slot="header">
@@ -62,6 +64,7 @@ export default {
     }
   },
   created () {
+    this.$message.info('此功能待开发')
   },
   methods: {
     handleEdit (item) {
