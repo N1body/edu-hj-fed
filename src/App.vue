@@ -1,7 +1,7 @@
 <template>
+  <!-- 主页面组件 -->
   <div id="app">
     <router-view/>
-    <!-- asdsad -->
   </div>
 </template>
 
