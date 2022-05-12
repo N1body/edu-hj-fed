@@ -1,4 +1,5 @@
 <template>
+  <!-- 添加菜单组件 -->
   <div>
     <CreateOrEdit title="添加菜单"/>
   </div>
