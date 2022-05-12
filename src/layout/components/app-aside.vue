@@ -1,5 +1,7 @@
 <template>
+  <!-- 侧边栏部分部分 -->
   <div class="aside">
+    <!-- 导航栏组件 -->
     <el-menu
       :default-active="currentIndex"
       class="el-menu-vertical-demo"
@@ -8,6 +10,7 @@
       active-text-color="#ffd04b"
       router
       >
+      <!-- 各菜单对应的导航 -->
       <el-submenu index="1">
         <template slot="title">
           <i class="el-icon-user"></i>
@@ -61,13 +64,11 @@ export default {
     }
   },
   computed: {
+    // 根据所在的路由更新激活的导航
     currentIndex () {
       const index = this.$route.path.split('/')[1]
       return '/' + (index === '' ? 'course' : index)
     }
-  },
-  created () {
-    console.log()
   }
 }
 </script>
