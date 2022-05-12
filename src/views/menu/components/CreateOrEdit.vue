@@ -1,9 +1,12 @@
 <template>
   <div>
+    <!-- 添加或编辑菜单组件 -->
     <el-card>
+      <!-- 标题部分 -->
       <div slot="header" class="clearfix">
         <span>{{ title }}</span>
       </div>
+      <!-- 菜单信息表单部分 -->
       <el-form :model="form" label-width="80px">
         <el-form-item label="菜单名称">
           <el-input v-model="form.name"></el-input>
