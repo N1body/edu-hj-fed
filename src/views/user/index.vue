@@ -1,4 +1,5 @@
 <template>
+  <!-- 用户管理组件 -->
   <div class="user">
     <UserList/>
   </div>
