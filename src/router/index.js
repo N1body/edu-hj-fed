@@ -4,7 +4,9 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+// 路由管理
 const router = new VueRouter({
+  // 各页面对应路由
   routes: [
     {
       name: 'login',
@@ -129,6 +131,32 @@ const router = new VueRouter({
           meta: {
             title: '资源分类'
           }
+        },
+        {
+          path: '/course/:courseId/edit',
+          name: 'editCourse',
+          component: () => import(/* webpackChunkName: 'courseEdit' */ '@/views/course/Edit.vue'),
+          meta: {
+            title: '编辑课程'
+          },
+          props: true
+        },
+        {
+          path: '/course/:courseId/section',
+          name: 'courseSection',
+          component: () => import(/* webpackChunkName: 'courseSection' */ '@/views/course/Section.vue'),
+          meta: {
+            title: '内容管理'
+          },
+          props: true
+        },
+        {
+          path: '/course/create',
+          name: 'addCourse',
+          component: () => import(/* webpackChunkName: 'addCourse' */ '@/views/course/Create.vue'),
+          meta: {
+            title: '添加课程'
+          }
         }
       ]
     },
@@ -142,7 +170,7 @@ const router = new VueRouter({
 })
 
 
-// 设置全局前置守卫
+// 设置全局前置守卫 处理登录失效情况
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requireAuth)) {
     // console.log(this)
