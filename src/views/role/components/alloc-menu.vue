@@ -1,15 +1,16 @@
 <template>
+  <!-- 分配菜单组件 -->
   <div>
     <el-card>
       <div slot="header">分配权限</div>
       <el-tree
-      :data="menus"
-      node-key="id"
-      :props="defaultProps"
-      :default-checked-keys="checkedKeys"
-      ref="menu-tree"
-      show-checkbox
-      default-expand-all
+        :data="menus"
+        node-key="id"
+        :props="defaultProps"
+        :default-checked-keys="checkedKeys"
+        ref="menu-tree"
+        show-checkbox
+        default-expand-all
       ></el-tree>
       <div style="text-align: center; margin-top: 30px">
         <el-button @click="resetChecked">清空</el-button>
