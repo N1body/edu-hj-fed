@@ -1,3 +1,4 @@
+// 用户信息请求模块
 import request from '@/utils/request'
 import qs from 'qs'
 
@@ -5,7 +6,7 @@ import qs from 'qs'
 export const login = data => {
   return request({
     method: 'POST',
-    url: '/front/user/login',
+    url: 'http://edufront.lagounews.com/front/user/login',
     data: qs.stringify(data)
   })
 }
@@ -14,7 +15,7 @@ export const login = data => {
 export const getUerInfo = () => {
   return request({
     method: 'GET',
-    url: '/front/user/getInfo'
+    url: 'http://edufront.lagounews.com/front/user/getInfo'
   })
 }
 
