@@ -1,4 +1,5 @@
 <template>
+  <!-- 角色列表组件 -->
   <div class="role-list">
     <!-- 搜索表单栏 -->
     <el-form :inline="true" :model="pages" class="demo-form-inline">
