@@ -1,4 +1,5 @@
 <template>
+  <!-- 资源分类组件 -->
   <div class="category">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
