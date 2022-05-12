@@ -1,4 +1,5 @@
 <template>
+  <!-- 编辑菜单组件 -->
   <div>
     <CreateOrEdit title="编辑菜单" :menuId="menuId"/>
   </div>
