@@ -1,6 +1,7 @@
 <template>
   <div class="error">
-    该页面不存在
+    <h1>404</h1>
+    <h2>Not Found</h2>
   </div>
 </template>
 
@@ -11,5 +12,4 @@ export default {
 </script>
 
 <style>
-
 </style>
