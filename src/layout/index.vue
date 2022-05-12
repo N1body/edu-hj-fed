@@ -1,13 +1,18 @@
 <template>
+  <!-- 整体布局组件 -->
   <div class="layout">
+    <!-- 布局容器组件 -->
     <el-container>
+      <!-- 侧边栏 -->
       <el-aside width="200px">
         <AppAside/>
       </el-aside>
       <el-container>
+        <!-- 头部栏 -->
         <el-header style="text-align: right; font-size: 12px">
           <AppHeader/>
         </el-header>
+        <!-- 主要页面 -->
         <el-main style="height: 500px; border: 1px solid #eee">
           <!-- 子路由出口 -->
           <router-view />
