@@ -1,6 +1,8 @@
 <template>
+  <!-- 登录组件 -->
   <div class="login">
     <h1>教育管理系統</h1>
+    <!-- 登录表单 -->
     <el-form :model="loginForm" :rules="rules" ref="loginForm" label-width="80px" class="login-form" label-position="top">
       <el-form-item label="手机号" prop="phone">
         <el-input type="phone" v-model="loginForm.phone"></el-input>
@@ -42,6 +44,7 @@ export default {
     }
   },
   methods: {
+    // 提交登录
     async onSubmit () {
       try {
         // 基础表单验证
