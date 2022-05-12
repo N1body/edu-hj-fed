@@ -1,6 +1,7 @@
 // 资源请求相关模块
 import request from '@/utils/request'
 
+// 根据角色 id 获取角色对应资源信息
 export const getRoleResources = roleId => {
   return request({
     method: 'GET',
@@ -11,6 +12,7 @@ export const getRoleResources = roleId => {
   })
 }
 
+// 分配角色资源信息
 export const allocateRoleResources = data => {
   return request({
     method: 'POST',
@@ -19,6 +21,7 @@ export const allocateRoleResources = data => {
   })
 }
 
+// 添加或者更新资源信息
 export const createOrUpdateSource = data => {
   return request({
     method: 'POST',
@@ -27,6 +30,7 @@ export const createOrUpdateSource = data => {
   })
 }
 
+// 获取资源分类信息
 export const getCategoryInfo = () => {
   return request({
     method: 'GET',
@@ -34,6 +38,7 @@ export const getCategoryInfo = () => {
   })
 }
 
+// 获取所有资源信息
 export const getAllResources = () => {
   return request({
     method: 'GET',
@@ -41,6 +46,7 @@ export const getAllResources = () => {
   })
 }
 
+// 根据 id 删除对应资源
 export const deleteResource = id => {
   return request({
     method: 'DELETE',
@@ -48,6 +54,7 @@ export const deleteResource = id => {
   })
 }
 
+// 获取所有分类信息
 export const getAllCategory = () => {
   return request({
     method: 'GET',
@@ -55,6 +62,7 @@ export const getAllCategory = () => {
   })
 }
 
+// 添加或者更新分类信息
 export const createOrUpdateCategory = data => {
   return request({
     method: 'POST',
@@ -63,6 +71,7 @@ export const createOrUpdateCategory = data => {
   })
 }
 
+// 根据 id 删除对应分类
 export const deleteCategory = id => {
   return request({
     method: 'DELETE',
@@ -70,6 +79,7 @@ export const deleteCategory = id => {
   })
 }
 
+// 根据页面信息获取资源列表
 export const getResourcePages = data => {
   return request({
     method: 'POST',
