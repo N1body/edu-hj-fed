@@ -9,6 +9,7 @@ Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
+// 入口文件
 new Vue({
   render: h => h(App),
   router,
