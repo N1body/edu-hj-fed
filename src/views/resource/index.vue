@@ -1,4 +1,5 @@
 <template>
+  <!-- 资源管理组件 -->
   <div class="resource">
     <ResourceList />
   </div>
